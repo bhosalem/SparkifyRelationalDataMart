@@ -1,5 +1,5 @@
 import psycopg2
-from sql_queries import create_table_queries, drop_table_queries
+from sql_queries import create_table_queries, drop_table_queries, drop_sequence_queries
 
 
 def create_database():
@@ -27,6 +27,10 @@ def drop_tables(cur, conn):
         cur.execute(query)
         conn.commit()
 
+def drop_sequences(cur,conn):
+    for query in drop_sequence_queries:
+        cur.execute(query)
+        conn.commit()
 
 def create_tables(cur, conn):
     for query in create_table_queries:
@@ -36,8 +40,8 @@ def create_tables(cur, conn):
 
 def main():
     cur, conn = create_database()
-    
     drop_tables(cur, conn)
+    drop_sequences(cur, conn)
     create_tables(cur, conn)
 
     conn.close()
