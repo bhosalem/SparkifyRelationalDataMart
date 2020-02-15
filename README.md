@@ -1,4 +1,4 @@
-# Sparkify Data warehouse
+# Sparkify Data Mart
 This project aims at building a datamart to help Sparkify(a music streaming company) analyze their user data.Since data resides in json log and song data files, the team decides to build a schema to contain this data locaded from the json logs.
 
 Since the analytics queries are read heavy, a schema which better suits the faster read performance would be STAR schema as described in the schema design diagram below.Columns marked as **bold** in the diagram are Primary keys for those tables/entities. Lines connecting entities represents Foreign key relationships between tables
@@ -35,4 +35,4 @@ E.g: If User A was opting the for free subscription till 21st April 2019 and swi
    
 # Sample Analytics Queries
 ## 1. Paid subscription users location wise
-    ![Paid User Subscriptions Locationwise](/home/workspace/Paid_users_count_locationwise.png)
+![Paid User Subscriptions Locationwise](https://github.com/bhosalem/SparkifyDataWarehouse/blob/bhosalem-patch-1/Paid_users_count_locationwise.PNG)
