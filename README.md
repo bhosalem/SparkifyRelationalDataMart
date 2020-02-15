@@ -1,8 +1,10 @@
 # Sparkify Data Mart
 This project aims at building a datamart to help Sparkify(a music streaming company) analyze their user data.Since data resides in json log and song data files, the team decides to build a schema to contain this data locaded from the json logs.
 
+
 Since the analytics queries are read heavy, a schema which better suits the faster read performance would be STAR schema as described in the schema design diagram below.Columns marked as **bold** in the diagram are Primary keys for those tables/entities. Lines connecting entities represents Foreign key relationships between tables
 ![Sparkify Star Schema](https://github.com/bhosalem/SparkifyDataWarehouse/blob/bhosalem-patch-1/Sparkify_Star_schema.png)
+
 
 ## 1. Data files:
      There are two data feed files
@@ -14,6 +16,7 @@ Since the analytics queries are read heavy, a schema which better suits the fast
       Type : json
       contains : This file contains data columns for dimensions users and time
       Sample Data:
+ bhosalem-patch-1
 ![Log data](https://github.com/bhosalem/SparkifyDataWarehouse/blob/bhosalem-patch-1/log-data.png)
 
 ## 2. Dimension tables:
@@ -33,6 +36,10 @@ E.g: If User A was opting the for free subscription till 21st April 2019 and swi
    Extracts data from song data and log data files and loads them in respective tables.
 
    
+=======
+![Log-Data](https://github.com/bhosalem/SparkifyDataWarehouse/blob/master/log-data.png)
+      
+
 # Sample Analytics Queries
 ## 1. Paid subscription users location wise
 ![Paid User Subscriptions Locationwise](https://github.com/bhosalem/SparkifyDataWarehouse/blob/bhosalem-patch-1/Paid_users_count_locationwise.PNG)
